@@ -1,0 +1,58 @@
+$color-dark: #333;
+$color-light: #f5f5f2;
+$color-text: #949292;
+$color-main: #f58220;
+$color-main-hover: #ffa200;
+$color-success: #04ae00;
+$color-warning: #ff0000;
+$color-link: #56819f;
+$color-body: #e4e4dee3;
+
+$font-main: 'Montserrat', sans-serif;
+$font-logo: 'Ma Shan Zheng', cursive;
+
+$font-normal: 400;
+$font-semibold: 600;
+$font-bold: 700;
+
+$base-size: 12px;
+
+$radius: 5px;
+$btn-height: 40px;
+$btn-square: $btn-height;
+$btn-regular: 92px;
+
+
+@mixin link-style {
+  text-decoration: none;
+  color: $color-link;
+}
+
+@mixin text-capitalize($txt-size) {
+  font-size: $txt-size;
+  text-transform: uppercase;
+  font-weight: $font-semibold;
+}
+
+// @mixin center() {
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
+@mixin btn($btn-bg, $btn-text, $btn-border) {
+  background: $btn-bg;
+  color: $btn-text;
+  border-color: $btn-border;
+  border-radius: $radius;
+  // transition: $transition;
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  padding: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  height: $btn-height;
+}

@@ -1,0 +1,15 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+  
+body {
+  font-family: $font-main;
+  font-size: $base-size;
+  font-weight: $font-normal;
+  color: $color-text;
+  background: $color-body;
+}
+  
+.container {
+  max-width: 700px;
+}

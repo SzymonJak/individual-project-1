@@ -1,0 +1,42 @@
+.top-bar {
+  position: fixed;
+  width: calc(100% - 190px);
+  left: 190px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid $color-text;
+  border-right: 1px solid $color-text;
+  line-height: 4 * $base-size;
+  background: $color-light;
+
+  i {
+    font-size: (1.2 * $base-size);
+  }
+
+  .wallet, .profile {
+    justify-content: space-around;
+    align-items: center;
+    border-left: 1px solid $color-text;
+    border-right: 1px solid $color-text;
+    padding: 0 (.5 * $base-size);
+  }
+
+  .notification, .quit {
+    justify-content: center;
+  }
+
+  .wallet p{
+    @include text-capitalize((1.2 * $base-size));
+    margin: 0;
+  }
+
+  .profile {
+    overflow: hidden;
+    white-space: nowrap;
+
+    a {
+      @include link-style;
+    }
+  }
+}
