@@ -87,6 +87,77 @@
 
     p {
       display: inline-block;
+
+      &:first-of-type {
+        font-weight: $font-semibold;
+      }
+
+      &:last-child {
+        font-size: 1.1 * $base-size;
+        color: $color-dark;
+      }
     }
+  }
+}
+
+.chart {
+  justify-content: center;
+
+  .chart-wrapper {
+    max-width: calc(70% + 48px);
+
+    p {
+      font-weight: $font-semibold;
+      margin: (4 * $base-size) 0 (2 * $base-size);
+    }
+  }
+
+  .buttons {
+    justify-content: center;
+    margin-bottom: 2 * $base-size;
+
+    a {
+      @include btn($color-light, $color-text, $color-light);
+      position: relative;
+      padding-left: 3 * $base-size;
+      text-transform: none;
+
+      &:nth-of-type(1)::before {
+        content: '';
+        position: absolute;
+        top: 50;
+        left: 10%;
+        background: $color-link;
+        border-radius: 50%;
+        width: $base-size;
+        height: $base-size;
+      }
+
+      &:nth-of-type(2) {
+        margin: 0 (2 * $base-size);
+      
+        &::before {
+          @extend a:nth-of-type(1)::before;
+          background: $color-main;
+        }
+      }
+
+      &:nth-of-type(3)::before {
+        @extend a:nth-of-type(1)::before;
+        background: $color-success;
+      }
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 2 * $base-size;
+  }
+}
+
+@media not all and (hover:none) {
+  .chart .buttons a:hover {
+    background-color: $color-body;
   }
 }

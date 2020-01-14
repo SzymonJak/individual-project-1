@@ -1,5 +1,6 @@
 .top-bar {
   position: fixed;
+  z-index: 100;
   width: calc(100% - 190px);
   left: 190px;
   justify-content: flex-end;
