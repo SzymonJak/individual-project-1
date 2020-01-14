@@ -1,0 +1,79 @@
+.links {
+  background: $color-light;
+  box-shadow: 0 0 4px $color-text;
+
+  h2 {
+    @include text-capitalize(1.2 * $base-size);
+    margin-left: $base-size;
+    padding-top: $base-size;
+  }
+}
+
+.links-wrapper {
+  align-items: center;
+  flex-direction: column;
+
+  .add-btn {
+    @include btn($color-main, $color-light, $color-main);
+    margin: (2 * $base-size) 0;
+  }
+}
+
+.links-table{
+  width: calc(70% + 48px);
+
+  .my-row {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $color-text;
+
+    &:last-child {
+      border-bottom: 1px solid $color-text;
+    }
+
+    div {
+      &:nth-child(1) {
+        flex: 3;
+        margin-left: $base-size;
+        
+        p {
+          font-weight: $font-semibold;;
+        }
+      }
+
+      &:nth-child(2) {
+        flex: 3;
+
+        a {
+          @include link-style;
+        }
+          
+      }
+
+      &:nth-child(3) {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+         
+        i {
+          display: none;
+          padding: $base-size;
+        }
+      }
+    }
+  }
+}
+
+@media not all and (hover:none) {
+  .links-table .my-row:hover {
+    background-color: $color-body;
+
+    div:nth-child(3) i {
+      display: inline-block;
+
+      &:hover {
+        color: $color-main;
+      }
+    }
+  }
+}
