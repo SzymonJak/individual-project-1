@@ -41,3 +41,21 @@
     }
   }
 }
+
+@media(max-width: 767px) {
+  .top-bar {
+    display: none;
+  }
+}
+
+@media(min-width: 1440px) {
+  .top-bar {
+    .wallet, .profile {
+      justify-content: center;
+
+      p, a {
+        padding: 0 $base-size;
+      }
+    }
+  }
+}

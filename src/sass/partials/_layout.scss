@@ -1,15 +1,29 @@
 .flex-grid {
   display: flex;
+}
 
-  .col-1 {
+.col-1 {
+  flex: 1;
+}
+
+.col-3 {
+  flex: 3;
+}
+
+.space {
+  flex: 8;
+}
+
+@media(min-width: 1440px) {
+  .col-xl-1 {
     flex: 1;
   }
 
-  .col-3 {
-    flex: 3;
+  .col-xl-3 {
+    flex: 2;
   }
 
-  .space {
-    flex: 8;
+  .space-xl {
+    flex: 10;
   }
 }

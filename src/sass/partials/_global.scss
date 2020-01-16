@@ -11,7 +11,7 @@ body {
 }
   
 .container {
-  max-width: 700px;
+  max-width: 1100px;
   margin: 8px auto;
 }
 
@@ -20,4 +20,19 @@ body {
   top: calc(48px);
   left: calc(190px);
   width: calc(100% - 190px);
+}
+
+@media(max-width: 767px) {
+  .content-wrapper {
+    position: relative;
+    width: 100%;
+    top: 48px;
+    left: 0;
+  }
+
+  .wrapper-narrow {
+    // top: 575px;
+    width: calc(100% - 190px);
+    left: 190px;
+  }
 }
