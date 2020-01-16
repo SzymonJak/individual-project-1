@@ -1,1 +1,1 @@
-# individual-project-1
+<a href="https://szymonjak.github.io/individual-project-1/dist/">link to projec</a>
