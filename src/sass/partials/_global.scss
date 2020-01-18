@@ -31,8 +31,8 @@ body {
   }
 
   .wrapper-narrow {
-    // top: 575px;
-    width: calc(100% - 190px);
-    left: 190px;
+    top: calc(300px + 48px);
+    // width: calc(100% - 190px);
+    // left: 190px;
   }
 }
